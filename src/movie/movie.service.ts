@@ -41,7 +41,6 @@ export class MovieService {
 	}
 
 	async getAll(searchTerm?: string) {
-		console.log('get all')
 
 		let options: WhereOptions<MovieModel> = {}
 

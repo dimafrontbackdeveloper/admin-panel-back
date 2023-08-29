@@ -20,7 +20,6 @@ export class AuthService {
 
 	async login(dto: AuthDto) {
 		const user = await this.validateUser(dto)
-		console.log(user.role)
 
 		return {
 			user: this.returnUserFields(user),

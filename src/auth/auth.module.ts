@@ -15,7 +15,7 @@ import { UserModel } from './user.model'
 			imports: [ConfigModule],
 			inject: [ConfigService],
 			useFactory: getJWTConfig
-		}), // чтобы использовать JwtService в auth.service.ts
+		}), // чтобы использовать JwtService в auth.service.ts. Итак, в auth.module.ts вы импортируете и используете JwtModule, потому что это модуль, отвечающий за аутентификацию и авторизацию. А в app.module.ts он не нужен, потому что он не является частью основной функциональности вашего приложения, а является частью более узкой, специфической области функциональности.
 		SequelizeModule.forFeature([UserModel])
 	],
 	controllers: [AuthController],
